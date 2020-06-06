@@ -17,8 +17,8 @@
         <div id="body-text">
         <h1>YOUR <span id="music">MUSIC.</span></h1>
         <form id="song">
-            <input v-model="songName" type="text" id="song-name" name="song-name" placeholder="Enter song name..." required />
-            <button type="submit" id="btn">Search Song</button>
+            <input v-model="songName" type="text" id="song-name" name="song-name" placeholder="Enter artist name..." required />
+            <button type="submit" id="btn" v-on:click="findSong">Search Song</button>
         </form>
         </div>
         <div id="social-media">
@@ -31,6 +31,9 @@
             </div>
         </div>
         <hr id="horiz"/>
+        <div>
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" width="0" height="0" alt="" id="image1"/>
+        </div>
     </div>
 </template>
 
@@ -39,8 +42,27 @@
         name: "Body",
         data(){
             return {
-                songName: ''
-            }
+                songName: '',
+                songKey:'YjQ3ZTMwMjAtNzdmYi00MzhiLWJkMDgtZDZmMTQ1ZjgwODdl',
+        }
+        },
+        methods:{
+            findSong(e){
+                e.preventDefault();
+                const d = this.songName.split();
+                let se = d.join('+');
+                fetch('https://itunes.apple.com/search?term='+se+'&limit=1')
+                .then(
+                    function (res) {
+                            return res.json();
+                    }
+                ).then(
+                  function (res) {
+                        document.getElementById('image1').src = res.results[0].artworkUrl100;
+                  }
+                );
+                this.songName ='';
+            },
         }
     }
 </script>
@@ -111,5 +133,11 @@
     #horiz{
         color: white;
         margin-top: 20px;
+    }
+    #image1{
+        width: 150px;
+        height:150px;
+        margin-left: 500px;
+        background: transparent;
     }
 </style>
