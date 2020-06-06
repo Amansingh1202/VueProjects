@@ -1,27 +1,31 @@
 <template>
   <div id="app">
     <Header />
+    <Body />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-
+import Header from './components/Header.vue';
+import Body from './components/Body.vue'
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Body
   }
 }
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body,html{
+    background-image: url("./assets/background.jpg");
+    height: 100%;
+    margin:0;
+    padding: 0;
+  }
+  #app{
+    background-image: linear-gradient(to right, rgba(138,43,226,0.7) , rgba(75, 119, 190, 0.9));
+    height: 100%;
+    width: 100%;
+  }
 </style>
