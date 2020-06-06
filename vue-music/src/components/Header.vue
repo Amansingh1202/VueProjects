@@ -25,7 +25,7 @@
 
     .header{
         font-family: sans-serif;
-        background-image: linear-gradient(to right,rgba(75, 119, 190, 1),rgba(154,18,179,1));;
+        background-image: linear-gradient(to right,rgba(75, 119, 190, 1),rgba(154,18,179,1));
     }
 
     a[data-v-61dd7a3d]{
