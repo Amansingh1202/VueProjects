@@ -19,12 +19,12 @@ export default {
 <style>
   body,html{
     background-image: url("./assets/background.jpg");
+    background-image: linear-gradient(to right, rgba(138,43,226,0.7) , rgba(75, 119, 190, 0.9));
     height: 100%;
     margin:0;
     padding: 0;
   }
   #app{
-    background-image: linear-gradient(to right, rgba(138,43,226,0.7) , rgba(75, 119, 190, 0.9));
     height: 100%;
     width: 100%;
   }
