@@ -17,5 +17,8 @@ export default {
 
 <style>
 #app {
+  margin: 6px;
+  border: black solid 2px;
+  border-radius: 5px;
 }
 </style>
