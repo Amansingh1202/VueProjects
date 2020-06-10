@@ -63,8 +63,8 @@
 <style>
 #app{
   margin: 6px;
-  border: black solid 2px;
-  border-radius: 5px;
+  border: rgba(0,0,0,0.2) solid 2px;
+  border-radius: 10px;
 }
   .carousel-inner img{
     width: 100%;
@@ -85,6 +85,7 @@
     width: 100%;
   }
   .nav1{
+    display: flex;
     position: absolute;
     color: white;
     bottom: 90%;
@@ -123,5 +124,11 @@
     bottom: 15%;
     font-size:1.2em;
     left: 32%;
+  }
+ .carousel .carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+   margin-left: 10px;
   }
 </style>
