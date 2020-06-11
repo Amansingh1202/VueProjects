@@ -51,6 +51,47 @@
       </div>
     </div>
     <router-view/>
+    <div id="footer">
+      <div class="social-tags">
+        <div id="social-text">Get connected with us on social networks!</div>
+        <div id="social-links">
+          <a href="#"><img src="./assets/facebook.png" alt="facebook" width="25" height="25"/></a>
+          <a href="#"><img src="./assets/twitter.png" alt="twitter" width="25" height="25"/></a>
+          <a href="#"><img src="./assets/google-plus.png" alt="google-plus" width="25" height="25"/></a>
+        </div>
+      </div>
+      <div id="footer-section">
+        <div id="company">
+          <h2>COMPANY NAME</h2>
+            <hr align="left" />
+            <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+        </div>
+        <div id="products">
+          <h2>PRODUCTS</h2>
+            <hr align="left" />
+            <div class="product-name">Product 1</div>
+            <div class="product-name">Product 2</div>
+            <div class="product-name">Product 3</div>
+            <div class="product-name">Product 4</div>
+        </div>
+        <div id="contact">
+          <h2>CONTACT</h2>
+          <hr align="left" />
+          <div class="contact-name">
+            <img src="./assets/home.png" alt="home" width="25" height="25"/>
+            <span>New York,NY 10012,US</span>
+          </div>
+          <div class="contact-name">
+            <img src="./assets/email.png" alt="email" width="25" height="25"/>
+            <span>info@example.com</span>
+          </div>
+          <div class="contact-name">
+            <img src="./assets/phone.png" alt="phone" width="25" height="25"/>
+            <span>+01 777 888 99</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -61,11 +102,13 @@
   </script>
 
 <style>
-#app{
-  margin: 6px;
-  border: rgba(0,0,0,0.2) solid 2px;
-  border-radius: 10px;
-}
+
+
+  #app{
+    margin: 6px;
+    border: rgba(0,0,0,0.2) solid 2px;
+    border-radius: 10px;
+  }
   .carousel-inner img{
     width: 100%;
     height:700px;
@@ -125,10 +168,61 @@
     font-size:1.2em;
     left: 32%;
   }
- .carousel .carousel-indicators li{
+  .carousel .carousel-indicators li{
     width: 10px;
     height: 10px;
     border-radius: 100%;
-   margin-left: 10px;
+    margin-left: 10px;
+  }
+  .social-tags{
+    display: flex;
+    background-color: blueviolet;
+    padding:20px;
+  }
+  #social-text{
+    color: white;
+    font-size: 1.3em;
+  }
+  #social-links{
+    margin-left: 60%
+  }
+  #social-links a{
+    margin-left:75px;
+  }
+  #footer hr{
+    background-color: blueviolet;
+    border: none;
+    height: 5px;
+    width:120px;
+    margin: 0px;
+    margin-bottom: 17%;
+  }
+  #footer-section{
+    background-color: #301934;
+    color: white;
+    display: flex;
+    padding-top: 2%;
+  }
+  #footer-section > div{
+    margin-left: 15%;
+    width: 300px;
+  }
+  #footer h2{
+    font-size: 1.3em;
+  }
+  #company p{
+    font-size:1.1em;
+
+  }
+  .product-name{
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+  .contact-name{
+    font-size:1.1em;
+    margin-bottom: 30px;
+  }
+  .contact-name img{
+    margin-right: 20px
   }
 </style>
