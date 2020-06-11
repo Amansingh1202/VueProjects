@@ -1,3 +1,3 @@
 module.exports = {
-	publicPath:'./website-template'
+	publicPath:'/website-template/'
 }
