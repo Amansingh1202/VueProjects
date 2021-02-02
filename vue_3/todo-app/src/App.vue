@@ -1,17 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <Header />
+    <div id="list">
+    <TodoList :tasks="tasks" @del-todo="delTodo"/>
+    <Forms @add-data="addTodos" />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  import TodoList from '@/components/TodoList.vue'
+  import Header from '@/components/Header.vue'
+  import Forms from '@/components/Forms.vue'
+  import { ref } from 'vue'
+  export default{
+    name:"App",
+    components:{
+      TodoList,
+      Header,
+      Forms
+    },
+    setup(){
+      const tasks = ref([])
+      const delTodo = (id1) => {
+        tasks.value = tasks.value.filter(task => task.id !== id1);
+      }
+      const addTodos = (newTodo) => {
+        tasks.value = [...tasks.value,newTodo];
+      }
+      return{
+        delTodo,
+        addTodos
+      }
+    }
   }
-}
 </script>
 
 <style>
@@ -23,4 +45,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+  #list{
+    border: 5px whitesmoke double;
+    width: 40%;
+    margin-left: 30%;
+    padding: 2em;
+    background-color: slategrey;
+  }
 </style>
