@@ -1,5 +1,5 @@
 <template>
-    <div class="todo" v-if="!isCompleted">
+    <div class="todo">
         {{todoname}}<button id="delete" @click="$emit('del-todo',id1)">X</button>
     </div>
     

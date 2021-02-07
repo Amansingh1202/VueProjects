@@ -10,8 +10,8 @@
     import { ref } from 'vue'
     export default {
         name: "Forms",
-        setup(props,{emit}){
-            const title = ref("")
+        setup(props,context){
+            const title = ref("");
             const addTodo = (e) =>{
                 e.preventDefault();
                 const newTodo = {
@@ -19,8 +19,7 @@
                     title:title.value,
                     completed:false
                 };
-                console.log(newTodo)
-                emit('add-data',newTodo);
+                context.emit('add-data',newTodo);
                 title.value = ''
             }
             return {
