@@ -30,7 +30,7 @@ export default {
   );
 }
 
-a[data-v-61dd7a3d] {
+a {
   color: whitesmoke;
   margin-left: 80%;
   text-decoration: none;
@@ -39,14 +39,14 @@ a[data-v-61dd7a3d] {
 a:hover {
   color: cornflowerblue;
 }
-#nav[data-v-61dd7a3d] {
+#nav {
   display: flex;
 }
-#logo[data-v-61dd7a3d] {
+#logo {
   margin-top: -25px;
   height: 150px;
 }
-#links[data-v-61dd7a3d] {
+#links {
   display: flex;
   justify-content: space-around;
   margin-left: 40%;

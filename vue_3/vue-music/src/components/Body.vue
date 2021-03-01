@@ -134,6 +134,7 @@ input:focus {
 }
 #btn:hover {
   color: green;
+  border: none;
 }
 #body-text {
   margin-top: -180px;
